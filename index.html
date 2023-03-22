@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio Website</title>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://kit.fontawesome.com/52a96585f9.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <!-- logo -->
+          <!--<img src="" class="">-->
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="header-text">
+          <p>Computer Science Student</p>
+          <h1>Hi, I'm <span>Onyeka</span><br> Okafor from Nigeria</h1>
+        </div>
+      </div>
+    </div>
+    <!-----------about------------->  
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <!--random picture of myself-->>
+            <!--<img src="" alt="">-->
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>I am currently a senior studying Computer Science at the University of Oklahoma.
+            I currently work as a student IT technician where I resolve multiple it support request on a weekly basis.
+            Last summer, I spent my time working as a software developer intern at Amazon, where I honed my java programming skills.
+            Ideally, I would like to continue to specialize in software engineering.</p>
+            
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+              <p class="tab-links" onclick="opentab('experience')">Experience</p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>Web Development</span><br>Web app Development</li>
+                <li><span>App Development</span><br>Building apps</li>
+                <li><span>UI/UX</span><br>Designing User Interfaces</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li><span>June 2022 - August 2022</span><br>Software Developer Intern at Amazon</li>
+                <li><span>May 2021 - July 2021</span><br>Software Developer Intern at Amazon at Headstone Ventures</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><span>May 2023</span><br>B.S. from the University of Oklahoma</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--------------------services--------------------->
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Web Development</h2>
+            <p>I have had experience in my internships and class projects in which 
+            I was gained expereince in web development</p>
+            <a href="#">Learn more</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-crop"></i>
+            <h2>App Development</h2>
+            <p>I am currently taking a Human Computer Intercation(HCI) class in which we are 
+            expected to form teams and work on a final project that we would present about 
+            at the end of the semester. My team and I are developing an app.</p>
+            <a href="#">Learn more</a>
+          </div>
+          <div>
+            <i class="fa-brands fa-app-store"></i>
+            <h2>UI/UX design</h2>
+            <p>In my HCI class, I am getting a deeper understanding of design, and putting it into practice by creating
+            prototypes of user interfaces using Balsamic wireframes and implenting those prototypes.</p>
+            <a href="#">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-----------------------protfolio----------------------->
+    <div id="portfolio">
+      <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+        for(tablink of tablinks){
+          tablink.classList.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+          tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+
+    </script>
+
+  </body>
+</html>
