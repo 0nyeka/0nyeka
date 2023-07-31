@@ -1,4 +1,4 @@
-### Hi there 👋
+### I am in the process of creating my portfolio and this is the code of what I have so far
 
 <!--
 **0nyeka/0nyeka** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
